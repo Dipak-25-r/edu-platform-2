@@ -1,8 +1,8 @@
 'use client'
 import { useState } from 'react'
-import Card from '@/components/Card'
-import Button from '@/components/Button'
-import Input from '@/components/Input'
+import Card from '@/components/Card.jsx'
+import Button from '@/components/Button.jsx'
+import Input from '@/components/Input.jsx'
 
 export default function AboutPage() {
   const [formData, setFormData] = useState({
