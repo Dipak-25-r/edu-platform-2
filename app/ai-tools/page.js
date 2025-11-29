@@ -1,8 +1,8 @@
 'use client'
 import { useState } from 'react'
-import Card from '@/components/Card'
-import Button from '@/components/Button'
-import LoadingSpinner from '@/components/LoadingSpinner'
+import Card from '@/components/Card.jsx'
+import Button from '@/components/Button.jsx'
+import LoadingSpinner from '@/components/LoadingSpinner.jsx'
 import { SparklesIcon, BeakerIcon, DocumentTextIcon, ChartBarIcon, LightBulbIcon } from '@heroicons/react/24/outline'
 
 export default function AIToolsPage() {
