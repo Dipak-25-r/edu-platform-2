@@ -1,30 +1,11 @@
-'use client'
-
-export default function Input({ 
-  label, 
-  type = 'text', 
-  value, 
-  onChange, 
-  placeholder = '',
-  required = false,
-  className = ''
-}) {
+export default function Input({ type = 'text', placeholder, value, onChange, className = '' }) {
   return (
-    <div className={`mb-4 ${className}`}>
-      {label && (
-        <label className="block text-sm font-semibold text-dark mb-2">
-          {label}
-          {required && <span className="text-red-500 ml-1">*</span>}
-        </label>
-      )}
-      <input
-        type={type}
-        value={value}
-        onChange={onChange}
-        placeholder={placeholder}
-        required={required}
-        className="input"
-      />
-    </div>
-  )
+    <input
+      type={type}
+      placeholder={placeholder}
+      value={value}
+      onChange={onChange}
+      className={`w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 ${className}`}
+    />
+  );
 }
