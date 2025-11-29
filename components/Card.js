@@ -1,0 +1,9 @@
+'use client'
+
+export default function Card({ children, className = '', hover = true }) {
+  return (
+    <div className={`card ${hover ? 'hover:shadow-card-hover' : ''} ${className}`}>
+      {children}
+    </div>
+  )
+}
