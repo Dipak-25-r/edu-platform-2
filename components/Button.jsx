@@ -1,15 +1,22 @@
-export default function Button({ children, onClick, className = '', variant = 'primary' }) {
-  const baseClasses = 'px-4 py-2 rounded-md font-medium transition-colors';
-  const variantClasses = variant === 'primary' 
-    ? 'bg-blue-600 text-white hover:bg-blue-700' 
-    : 'bg-gray-200 text-gray-800 hover:bg-gray-300';
-  
+'use client'
+
+export default function Button({ 
+  children, 
+  className = '', 
+  type = 'button',
+  onClick,
+  disabled = false,
+  ...props 
+}) {
   return (
-    <button 
+    <button
+      type={type}
       onClick={onClick}
-      className={`${baseClasses} ${variantClasses} ${className}`}
+      disabled={disabled}
+      className={`px-6 py-2 bg-primary text-white rounded-lg font-medium hover:bg-primary-dark transition-colors disabled:opacity-50 disabled:cursor-not-allowed ${className}`}
+      {...props}
     >
       {children}
     </button>
-  );
+  )
 }
